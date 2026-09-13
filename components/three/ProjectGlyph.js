@@ -43,7 +43,7 @@ function TerrainGlyph({ active }) {
           <bufferGeometry>
             <bufferAttribute attach="attributes-position" array={r.positions} count={r.count} itemSize={3} />
           </bufferGeometry>
-          <lineBasicMaterial color={r.top ? ACCENT : GREY} transparent opacity={r.top ? 0.9 : 0.35 + i * 0.06} />
+          <lineBasicMaterial color={r.top ? ACCENT : '#b3afa6'} transparent opacity={r.top ? 1 : 0.5 + i * 0.06} />
         </lineLoop>
       ))}
     </group>
@@ -126,7 +126,7 @@ export default function ProjectGlyph({ kind = 'stack', active = false }) {
     <Canvas
       dpr={[1, 1.5]}
       gl={{ antialias: true, alpha: true }}
-      camera={{ position: [0, 0.4, 4.6], fov: 40 }}
+      camera={{ position: [0, 0.4, 4.2], fov: 40 }}
       style={{ position: 'absolute', inset: 0 }}
     >
       <Glyph active={active} />

@@ -19,10 +19,17 @@ const mono = JetBrains_Mono({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${inter.variable} ${serif.variable} ${mono.variable} grain`}>
+    <div className="grain">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <style jsx global>{`
+        :root {
+          --font-inter: ${inter.style.fontFamily};
+          --font-serif: ${serif.style.fontFamily};
+          --font-mono-stack: ${mono.style.fontFamily};
+        }
+      `}</style>
       <Component {...pageProps} />
     </div>
   );

@@ -65,8 +65,8 @@ function Cloud({ words, pointerRef }) {
       // fade labels on the far side of the sphere so the front reads clearly
       const t = THREE.MathUtils.clamp((depth - (camera.position.z - radius)) / (radius * 2), 0, 1);
       sprite.material.opacity = THREE.MathUtils.lerp(1, 0.12, t);
-      const s = THREE.MathUtils.lerp(1.05, 0.7, t);
-      sprite.scale.set(s * sprite.userData.aspect * 0.42, s * 0.42, 1);
+      const s = THREE.MathUtils.lerp(1.0, 0.65, t);
+      sprite.scale.set(s * sprite.userData.aspect * 0.4, s * 0.4, 1);
     });
   });
 
@@ -95,7 +95,7 @@ export default function SkillsCloud({ words, pointerRef }) {
     <Canvas
       dpr={[1, 1.75]}
       gl={{ antialias: true, alpha: true }}
-      camera={{ position: [0, 0, 8.2], fov: 42 }}
+      camera={{ position: [0, 0, 10.5], fov: 42 }}
       style={{ position: 'absolute', inset: 0 }}
     >
       <Cloud words={words} pointerRef={pointerRef} />
