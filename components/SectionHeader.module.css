@@ -1,0 +1,33 @@
+.header {
+  display: grid;
+  gap: 18px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+  max-width: 720px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.meta::after {
+  content: '';
+  flex: 0 0 48px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.eyebrow {
+  color: var(--text-dim);
+}
+
+.title {
+  font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+}
+
+.lede {
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  max-width: 560px;
+}
